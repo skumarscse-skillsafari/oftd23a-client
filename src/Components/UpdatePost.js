@@ -19,7 +19,7 @@ const UpdatePost = () => {
       .get(`${BASE_URL}/api/v1/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
-  }, []);
+  }, [id]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost((prev) => {

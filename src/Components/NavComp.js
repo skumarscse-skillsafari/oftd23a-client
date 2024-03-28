@@ -18,11 +18,9 @@ const NavComp = () => {
           <button
             className="btn btn-primary me-4"
             onClick={() => {
-              {
-                localStorage.getItem("token")
-                  ? navigate("/create", { replace: true })
-                  : alert("User must loggedin to create post");
-              }
+              localStorage.getItem("token")
+                ? navigate("/create", { replace: true })
+                : alert("User must loggedin to create post");
             }}
           >
             Create Post

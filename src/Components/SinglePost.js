@@ -1,5 +1,4 @@
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -12,7 +11,7 @@ const SinglePost = () => {
       .get(`${BASE_URL}/api/v1/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
-  }, []);
+  }, [id]);
   return (
     <div className="container">
       <h2 className="display-3 text-center mt-3">Single Post </h2>

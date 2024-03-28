@@ -25,7 +25,7 @@ const Profile = () => {
       .get(`${BASE_URL}/api/v1/users/${userId}`)
       .then((res) => setUser(res?.data?.data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [userId]);
 
   const [user, setUser] = useState({});
   return (
