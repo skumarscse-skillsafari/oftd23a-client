@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "./Post";
-import { BASE_URL } from "../../api/baseURL";
+import { BASE_URL } from "../api/baseURL";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {

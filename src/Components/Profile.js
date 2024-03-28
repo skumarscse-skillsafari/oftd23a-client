@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "../../api/baseURL";
+import { BASE_URL } from "../api/baseURL";
 
 const Profile = () => {
   const navigate = useNavigate();
