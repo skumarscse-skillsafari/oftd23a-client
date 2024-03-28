@@ -8,8 +8,9 @@ const Posts = () => {
     axios
       .get(`${BASE_URL}/api/v1/posts`, {
         headers: {
-          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin":
+            "https://voluble-travesseiro-8985be.netlify.app",
         },
       })
       .then((res) => setPosts(res?.data?.data))
