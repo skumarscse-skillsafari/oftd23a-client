@@ -6,7 +6,12 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/v1/posts`)
+      .get(`${BASE_URL}/api/v1/posts`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => setPosts(res?.data?.data))
       .catch((error) => alert(error.response.data.message));
   }, [posts]);
