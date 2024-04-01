@@ -4,7 +4,7 @@ import FileBase64 from "react-file-base64";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../api/baseURL";
+import BASE_URL from "../api/baseURL";
 const UpdatePost = () => {
   const { id } = useParams();
   const navigate = useNavigate();

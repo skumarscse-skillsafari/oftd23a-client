@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import axios from "axios";
-import { BASE_URL } from "../api/baseURL";
+import BASE_URL from "../api/baseURL";
 const Signup = () => {
   const [user, setUser] = useState({
     username: "",

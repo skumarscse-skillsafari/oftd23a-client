@@ -2,7 +2,7 @@ import axios from "axios";
 import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { BASE_URL } from "../api/baseURL";
+import BASE_URL from "../api/baseURL";
 const SinglePost = () => {
   const { id } = useParams();
   const [post, setPost] = useState({});

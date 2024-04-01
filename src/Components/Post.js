@@ -2,7 +2,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { BASE_URL } from "../api/baseURL";
+import BASE_URL from "../api/baseURL";
 const Post = ({ post }) => {
   const token =
     localStorage.getItem("token") ||
