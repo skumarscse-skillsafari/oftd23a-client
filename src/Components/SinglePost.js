@@ -11,7 +11,7 @@ const SinglePost = () => {
       .get(`${BASE_URL}/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
-  }, [id]);
+  }, []);
   return (
     <div className="container">
       <h2 className="display-3 text-center mt-3">Single Post </h2>
