@@ -16,14 +16,14 @@ const SinglePost = () => {
     <div className="container">
       <h2 className="display-3 text-center mt-3">Single Post </h2>
       <Card>
-        <Card.Img variant="top" src={post.image} />
+        <Card.Img variant="top" src={post?.image} />
         <Card.Body>
-          <Card.Title>{post.title}</Card.Title>
-          <Card.Text>{post.description}</Card.Text>
-          <Card.Text>Tags: {post.tags.join(", ")}</Card.Text>
-          <Card.Text>Author: {post.author}</Card.Text>
+          <Card.Title>{post?.title}</Card.Title>
+          <Card.Text>{post?.description}</Card.Text>
+          <Card.Text>Tags: {post?.tags?.join(", ")}</Card.Text>
+          <Card.Text>Author: {post?.author}</Card.Text>
           <Card.Text>
-            Created at: {new Date(post.createdAt).toLocaleDateString()}
+            Created at: {new Date(post?.createdAt).toLocaleDateString()}
           </Card.Text>
         </Card.Body>
       </Card>
