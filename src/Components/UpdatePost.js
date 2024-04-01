@@ -16,7 +16,7 @@ const UpdatePost = () => {
   });
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/v1/posts/${id}`)
+      .get(`${BASE_URL}/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
   }, [id]);
@@ -34,7 +34,7 @@ const UpdatePost = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     await axios
-      .put(`${BASE_URL}/api/v1/posts/${id}`, post, {
+      .put(`${BASE_URL}/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },

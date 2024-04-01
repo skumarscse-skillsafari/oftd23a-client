@@ -14,7 +14,7 @@ const Post = ({ post }) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     await axios
-      .delete(`${BASE_URL}/api/v1/posts/${e.target.id}`, {
+      .delete(`${BASE_URL}/posts/${e.target.id}`, {
         headers: {
           "x-access-token": token,
         },

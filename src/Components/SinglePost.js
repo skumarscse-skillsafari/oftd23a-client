@@ -8,7 +8,7 @@ const SinglePost = () => {
   const [post, setPost] = useState({});
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/v1/posts/${id}`)
+      .get(`${BASE_URL}/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
   }, [id]);

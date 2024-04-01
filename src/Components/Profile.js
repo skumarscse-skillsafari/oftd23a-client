@@ -22,7 +22,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/v1/users/${userId}`)
+      .get(`${BASE_URL}/users/${userId}`)
       .then((res) => setUser(res?.data?.data))
       .catch((error) => console.log(error));
   }, [userId]);

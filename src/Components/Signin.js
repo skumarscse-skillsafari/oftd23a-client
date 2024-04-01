@@ -25,7 +25,7 @@ const Signin = () => {
     e.preventDefault();
 
     await axios
-      .post(`${BASE_URL}/api/v1/users/signin`, user)
+      .post(`${BASE_URL}/users/signin`, user)
       .then((res) => {
         alert(res.data.message);
         localStorage.setItem("token", res.data.token);

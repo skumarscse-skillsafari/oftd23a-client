@@ -6,13 +6,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/api/v1/posts`, {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin":
-            "https://voluble-travesseiro-8985be.netlify.app",
-        },
-      })
+      .get(`${BASE_URL}/posts`)
       .then((res) => setPosts(res?.data?.data))
       .catch((error) => alert(error.response.data.message));
   }, [posts]);

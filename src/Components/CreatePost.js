@@ -34,7 +34,7 @@ const CreatePost = () => {
     const { id } = jwt;
     console.log(post);
     await axios
-      .post(`${BASE_URL}/api/v1/posts/${id}`, post, {
+      .post(`${BASE_URL}/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },

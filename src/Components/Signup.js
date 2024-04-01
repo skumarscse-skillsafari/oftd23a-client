@@ -25,7 +25,7 @@ const Signup = () => {
     e.preventDefault();
 
     await axios
-      .post(`${BASE_URL}/api/v1/users/signup`, user)
+      .post(`${BASE_URL}/users/signup`, user)
       .then((res) => alert(res.data.message))
       .catch((error) => console.log(error));
   };
