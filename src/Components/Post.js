@@ -19,7 +19,10 @@ const Post = ({ post }) => {
           "x-access-token": token,
         },
       })
-      .then(() => alert("Post deleted successfully"))
+      .then(() => {
+        alert("Post deleted successfully");
+        window.location.reload();
+      })
       .catch((error) => alert(error.response.data.message));
   };
   return (
