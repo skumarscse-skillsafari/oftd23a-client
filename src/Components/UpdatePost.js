@@ -32,7 +32,7 @@ const UpdatePost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token");
+    const token = localStorage?.getItem("token");
     await axios
       .put(`${BASE_URL}/posts/${id}`, post, {
         headers: {
@@ -40,10 +40,10 @@ const UpdatePost = () => {
         },
       })
       .then((res) => {
-        alert(res.data.message);
+        console.log(res.data);
         navigate("/", { replace: true });
       })
-      .catch((error) => alert(error.response.data.message));
+      .catch((error) => console.error(error));
   };
   return (
     <div className="container">
