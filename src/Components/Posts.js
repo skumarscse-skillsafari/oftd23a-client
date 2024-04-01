@@ -9,7 +9,7 @@ const Posts = () => {
       .get(`${BASE_URL}/posts`)
       .then((res) => setPosts(res?.data?.data))
       .catch((error) => alert(error.response.data.message));
-  }, []);
+  }, [posts]);
   console.log(posts);
   return (
     <div className="container">
