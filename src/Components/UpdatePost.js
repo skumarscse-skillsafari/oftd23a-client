@@ -17,7 +17,7 @@ const UpdatePost = () => {
   useEffect(() => {
     axios
       .get(`${BASE_URL}/posts/${id}`)
-      .then((res) => setPost(res.data.data))
+      .then((res) => setPost(res?.data?.data))
       .catch((error) => alert(error.response.data.message));
   }, [id]);
   const handleChange = (e) => {
@@ -55,7 +55,7 @@ const UpdatePost = () => {
             type="text"
             placeholder="Enter post title"
             name="title"
-            value={post.title}
+            value={post?.title}
             onChange={handleChange}
           />
         </Form.Group>
@@ -66,7 +66,7 @@ const UpdatePost = () => {
             rows={3}
             placeholder="Enter post description"
             name="description"
-            value={post.description}
+            value={post?.description}
             onChange={handleChange}
           />
         </Form.Group>
@@ -92,7 +92,7 @@ const UpdatePost = () => {
             type="text"
             placeholder="Enter tags"
             name="tags"
-            value={post.tags}
+            value={post?.tags}
             onChange={handleChange}
           />
         </Form.Group>
